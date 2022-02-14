@@ -12,6 +12,7 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.PotionMeta;
 import org.bukkit.potion.PotionType;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -44,6 +45,13 @@ public class EventListeners implements Listener {
                     }
                     else if(off.getType().equals(Material.POPPY)){
                         brewItem(p, Items.opium);
+                    }
+                }
+                else if(potionMeta.getBasePotionData().getType().equals(PotionType.AWKWARD)){
+                    if(new ArrayList<>(potionMeta.getLore()).get(0).equals(ChatColor.GRAY + "H₂SO₃")){
+                        if(off.getType().equals(Material.GUNPOWDER)){
+                            brewItem(p, Items.h2so4);
+                        }
                     }
                 }
             }
