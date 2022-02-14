@@ -1,6 +1,0 @@
-name: Alchemy
-version: '${project.version}'
-main: com.b1n4ry.Alchemy
-api-version: 1.17
-authors: [ b1n4ry ]
-description: b1n4ry plugin
