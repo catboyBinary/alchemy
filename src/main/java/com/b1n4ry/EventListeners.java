@@ -42,6 +42,9 @@ public class EventListeners implements Listener {
                     if(off.getType().equals(Material.GUNPOWDER)) {
                         brewItem(p, Items.h2so3);
                     }
+                    else if(off.getType().equals(Material.POPPY)){
+                        brewItem(p, Items.opium);
+                    }
                 }
             }
         }
